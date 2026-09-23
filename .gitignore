@@ -1,0 +1,25 @@
+# Environment secrets (envsecretrules Rule 3.2)
+.env
+.env.local
+.env.*.local
+.env.production
+backend/.env
+frontend/.env.local
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+.next/
+out/
+build/
+dist/
+
+# Logs & OS noise
+*.log
+.DS_Store
+
+# Caches
+.npm-cache/
+.freebuff/
+.obsidian/
