@@ -405,7 +405,7 @@ export default function DashboardPage() {
       const token = sessionData.session?.access_token;
       if (!token) throw new Error('You must be logged in to trigger a digest.');
 
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:3000';
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL?.replace(/\/$/, '') || '';
       const res = await fetch(`${backendUrl}/api/teams/${team.id}/digest/trigger`, {
         method: 'POST',
         headers: {
